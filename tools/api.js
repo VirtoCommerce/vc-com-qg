@@ -10,6 +10,7 @@ let headers = {
 
 async function sendGetRequest(apiPath) {
     let response = await I.sendGetRequest(apiPath, headers);
+    console.log('GET REQUEST');
     console.log(apiPath);
     console.log(response.status);
     // console.log(response);
@@ -24,6 +25,7 @@ async function sendGetRequest(apiPath) {
 
 async function sendDeleteRequest(apiPath) {
     let response = await I.sendDeleteRequest(apiPath, headers);
+    console.log('DELETE REQUEST');
     console.log(apiPath);
     console.log(response.status);
     // console.log(response);
@@ -48,12 +50,26 @@ function verifyRecord(expected, actual) {
     assert.deepStrictEqual(actual.custom_fields[2].value, expected.describe);
 };
 
+function verifyWhitePaperRecord(expected, actual, assert_type) {
+    assert.deepStrictEqual(actual.FirstName, expected.fullName);
+    assert.deepStrictEqual(actual.Email, expected.email);
+    //check asset type
+    assert.deepStrictEqual(actual.custom_fields[0].value, assert_type);
+}
+
 module.exports = {
     deleteUser: async (email) => {
         sendDeleteRequest(contactPattern.replace("%s", email));
     },
+
     verifyFullRecordCreated: async (user) => {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
         verifyRecord(user, pilotUser.data);
     },
+
+    verifyWhitePaper: async (user, asset_type) => {
+        let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
+        console.log(pilotUser.data);
+        verifyWhitePaperRecord(user, pilotUser.data, asset_type);
+    }
 };

@@ -16,16 +16,16 @@ module.exports = {
         I.click(b2bChallenges);
     },
 
-    openCloudBenefits(){
+    openCloudBenefits() {
         I.click(cloudBenefits);
     },
 
-    openEnterpriseChallenges(){
+    openEnterpriseChallenges() {
         I.pressKey("Pagedown");
         I.click(enterpriseChallenges);
     },
 
-    openMigrationIssues(){
+    openMigrationIssues() {
         I.pressKey("Pagedown");
         I.click(migrationIssues);
     },
@@ -34,6 +34,8 @@ module.exports = {
         I.pressKey('Pagedown');
         I.fillField(email, user.email);
         I.fillField(name, user.fullName);
+        //workaround for filling forms
+        I.wait(10);
         I.click(downloadButton);
     }
 };

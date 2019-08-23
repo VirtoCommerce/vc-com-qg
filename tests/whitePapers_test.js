@@ -8,37 +8,43 @@ Before((I) => {
     I.pressKey('Pagedown');
 });
 
+After((api) => {
+    api.deleteUser(user.email);
+});
+
 Scenario('B2b challenges', (I, whitePapersMainPage, api) => {
     whitePapersMainPage.openB2bChallenges();
     I.waitUrlEquals('download-b2b-whitepaper');
     whitePapersMainPage.downloadWhitePaper(user);
     //api request
-    api.verifyFullRecordCreated(user);
     I.waitUrlEquals('https://vcpro.blob.core.windows.net/blogs/whitepaper-top-5-b2b-challenges.pdf');
+    api.verifyWhitePaper(user, user.b2bChallengesWP);
 });
 
-Scenario('Cloud benefits', (I, whitePapersMainPage) => {
+Scenario('Cloud benefits', (I, whitePapersMainPage, api) => {
     whitePapersMainPage.openCloudBenefits();
     I.waitUrlEquals('download-cloud-whitepaper');
     whitePapersMainPage.downloadWhitePaper(user);
-    //api request
     I.waitUrlEquals('https://vcpro.blob.core.windows.net/blogs/whitepaper-5-reasons-to-switch-your-ecommerce-to-the-cloud.pdf');
+    //api request
+    api.verifyWhitePaper(user, user.cloudBenefitsWP);
 });
 
-Scenario('Enterprise challenges', (I, whitePapersMainPage) => {
+Scenario('Enterprise challenges', (I, whitePapersMainPage, api) => {
     whitePapersMainPage.openEnterpriseChallenges();
     I.waitUrlEquals('enterprise-ecommerce-whitepaper');
     whitePapersMainPage.downloadWhitePaper(user);
-    //api request
-
     I.waitUrlEquals('https://vcpro.blob.core.windows.net/blogs/whitepaper-ecommerce-platform-migration-problems.pdf');
+    //api request
+    api.verifyWhitePaper(user, user.enterpriseChallengesWP);
 });
 
-Scenario('Migration issues', (I, whitePapersMainPage) => {
+Scenario('Migration issues', (I, whitePapersMainPage, api) => {
     whitePapersMainPage.openMigrationIssues();
     I.waitUrlEquals('migration-whitepaper');
     whitePapersMainPage.downloadWhitePaper(user);
-    //api request
-
     I.waitUrlEquals('https://vcpro.blob.core.windows.net/blogs/whitepaper-ecommerce-platform-migration-problems.pdf');
+    //api request
+    api.verifyWhitePaper(user, user.migrationIssuesWP);
 });
+
