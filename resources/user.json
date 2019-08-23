@@ -1,0 +1,38 @@
+{
+    "fullName": "alex text",
+    "email": "asd@asd.asd",
+    "phone": "+71234567890",
+    "company": "virtoway",
+    "jobTitle": "employee",
+    "website": "www.web-site.com",
+    "region": "Americas",
+    "describe": "I am a business or technical user who needs/has an ecommerce platform",
+    "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    "firstName": "Alex",
+    "lastName": "TestUser",
+    "postalCode":  "5451414614",
+    "githubHandle": "https://github.com",
+    "agree" : "I AGREE",
+    "streetAddress" : "Nevsky prospekt",
+
+    "users" : [
+      {
+        "fullName": "user1",
+        "email": "qatest@user1.com",
+        "phone": "+8483814815134",
+        "company": "virtoway",
+        "jobTitle": "manager",
+        "website": "www.google.com",
+        "region": "Americas",
+        "describe": "I am a business or technical user who needs/has an ecommerce platform",
+        "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+
+        "firstName": "Andrew",
+        "lastName": "Jameson",
+        "postalCode":  "12341234",
+        "githubHandle": "https://github.com/fdafaffafa",
+        "agree" : "I AGREE",
+        "streetAddress" : "Nevsky prospekt, User_1 address.com"
+      }
+    ]
+}
