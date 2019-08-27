@@ -24,7 +24,7 @@ exports.config = {
         I: './steps_file.js',
         basePage: './pages/basePage.js',
         becomePartnerPage: './pages/becomePartner.js',
-        contributeAgreement: './pages/contributeAgreement.js',
+        contributeAgreementPage: './pages/contributeAgreement.js',
         whitePapersMainPage: './pages/whitePaperMain.js',
         api: './tools/api.js'
     },

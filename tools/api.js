@@ -68,6 +68,19 @@ function verifyBecomePartnerRecord(expected, actual) {
     assert.deepStrictEqual(actual.custom_fields[0].value, expected.comments);
 }
 
+function verifyContributeAgreementRecord(expected, actual) {
+    assert.deepStrictEqual(actual.FirstName, expected.firstName);
+    assert.deepStrictEqual(actual.LastName, expected.lastName);
+    assert.deepStrictEqual(actual.Email, expected.email);
+    assert.deepStrictEqual(actual.MailingCountry, expected.postalCode);
+    assert.deepStrictEqual(actual.Phone, expected.phone);
+    assert.deepStrictEqual(actual.Company, expected.company);
+    //custom fields
+    assert.deepStrictEqual(actual.custom_fields[0].value, expected.githubHandle);
+    assert.deepStrictEqual(actual.custom_fields[1].value, expected.streetAddress);
+}
+
+
 module.exports = {
     deleteUser: async (email) => {
         sendDeleteRequest(contactPattern.replace("%s", email));
@@ -88,5 +101,11 @@ module.exports = {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
         console.log(pilotUser.data);
         verifyBecomePartnerRecord(user, pilotUser.data);
+    },
+
+    verifyContributeAgreement: async (user) => {
+        let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
+        console.log(pilotUser.data);
+        verifyContributeAgreementRecord(user, pilotUser.data);
     }
 };
