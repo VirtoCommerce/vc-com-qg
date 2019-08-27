@@ -1,4 +1,47 @@
 {
+    "users_contribute_agreement" : [
+        {
+            "firstName":"First name",
+            "lastName":"Last name",
+            "email":"asd@asd.asd",
+            "githubHandle":"https://github.com/12345",
+            "streetAddress":"Nevsky prospekt 12345",
+            "posalCode":"12345678",
+            "phone":"+71234567890",
+            "agree": "I AGREE"
+        },
+        {
+          "firstName":"Updated First Name",
+          "lastName":"Updated Last Name",
+          "email":"asd@asd.asd",
+          "githubHandle":"https://github.com/54321",
+          "streetAddress":"Nevsky prospekt 54321",
+          "posalCode":"87654321",
+          "phone":"+70987654321",
+          "agree": "I AGREE"
+        }
+    ],
+    "users_become_partner": [
+       {
+        "firstName":"First name",
+        "lastName":"Last name",
+         "email": "asd@asd.asd",
+         "phone": "+71234567890",
+         "company": "virtoway",
+         "website": "www.web-site.com",
+         "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+       },
+      {
+        "firstName":"First name changed",
+        "lastName":"Last name changed",
+        "email": "asd@asd.asd",
+        "phone": "+7987654321",
+        "company": "virtoway54321",
+        "website": "www.web-site1234.com",
+        "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ],
+
     "fullName": "alex text",
     "email": "asd@asd.asd",
     "phone": "+71234567890",

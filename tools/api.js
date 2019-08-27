@@ -57,6 +57,17 @@ function verifyWhitePaperRecord(expected, actual, assert_type) {
     assert.deepStrictEqual(actual.custom_fields[0].value, assert_type);
 }
 
+function verifyBecomePartnerRecord(expected, actual) {
+    assert.deepStrictEqual(actual.FirstName, expected.firstName);
+    assert.deepStrictEqual(actual.LastName, expected.lastName);
+    assert.deepStrictEqual(actual.Email, expected.email);
+    assert.deepStrictEqual(actual.Phone, expected.phone);
+    assert.deepStrictEqual(actual.Company, expected.company);
+    assert.deepStrictEqual(actual.Website, expected.website);
+    //custom fields
+    assert.deepStrictEqual(actual.custom_fields[0].value, expected.comments);
+}
+
 module.exports = {
     deleteUser: async (email) => {
         sendDeleteRequest(contactPattern.replace("%s", email));
@@ -71,5 +82,11 @@ module.exports = {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
         console.log(pilotUser.data);
         verifyWhitePaperRecord(user, pilotUser.data, asset_type);
+    },
+
+    verifyBecomePartner: async (user) => {
+        let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
+        console.log(pilotUser.data);
+        verifyBecomePartnerRecord(user, pilotUser.data);
     }
 };
