@@ -50,7 +50,7 @@ function verifyRecord(expected, actual) {
     assert.deepStrictEqual(actual.custom_fields[2].value, expected.describe);
 };
 
-function verifyWhitePaperRecord(expected, actual, assert_type) {
+function verifyDownloadAssetRecord(expected, actual, assert_type) {
     assert.deepStrictEqual(actual.FirstName, expected.fullName);
     assert.deepStrictEqual(actual.Email, expected.email);
     //check asset type
@@ -91,10 +91,10 @@ module.exports = {
         verifyRecord(user, pilotUser.data);
     },
 
-    verifyWhitePaper: async (user, asset_type) => {
+    verifyDownloadedAsset: async (user, asset_type) => {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
         console.log(pilotUser.data);
-        verifyWhitePaperRecord(user, pilotUser.data, asset_type);
+        verifyDownloadAssetRecord(user, pilotUser.data, asset_type);
     },
 
     verifyBecomePartner: async (user) => {

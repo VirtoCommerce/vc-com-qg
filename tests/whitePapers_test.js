@@ -18,7 +18,7 @@ Scenario('B2b challenges', (I, whitePapersMainPage, api) => {
     whitePapersMainPage.downloadWhitePaper(user);
     //api request
     I.waitUrlEquals('https://vcpro.blob.core.windows.net/blogs/whitepaper-top-5-b2b-challenges.pdf');
-    api.verifyWhitePaper(user, user.b2bChallengesWP);
+    api.verifyDownloadedAsset(user, user.b2bChallengesWP);
 });
 
 Scenario('Cloud benefits', (I, whitePapersMainPage, api) => {
@@ -27,7 +27,7 @@ Scenario('Cloud benefits', (I, whitePapersMainPage, api) => {
     whitePapersMainPage.downloadWhitePaper(user);
     I.waitUrlEquals('https://vcpro.blob.core.windows.net/blogs/whitepaper-5-reasons-to-switch-your-ecommerce-to-the-cloud.pdf');
     //api request
-    api.verifyWhitePaper(user, user.cloudBenefitsWP);
+    api.verifyDownloadedAsset(user, user.cloudBenefitsWP);
 });
 
 Scenario('Enterprise challenges', (I, whitePapersMainPage, api) => {
@@ -36,7 +36,7 @@ Scenario('Enterprise challenges', (I, whitePapersMainPage, api) => {
     whitePapersMainPage.downloadWhitePaper(user);
     I.waitUrlEquals('https://vcpro.blob.core.windows.net/blogs/whitepaper-ecommerce-platform-migration-problems.pdf');
     //api request
-    api.verifyWhitePaper(user, user.enterpriseChallengesWP);
+    api.verifyDownloadedAsset(user, user.enterpriseChallengesWP);
 });
 
 Scenario('Migration issues', (I, whitePapersMainPage, api) => {
@@ -45,6 +45,6 @@ Scenario('Migration issues', (I, whitePapersMainPage, api) => {
     whitePapersMainPage.downloadWhitePaper(user);
     I.waitUrlEquals('https://vcpro.blob.core.windows.net/blogs/whitepaper-ecommerce-platform-migration-problems.pdf');
     //api request
-    api.verifyWhitePaper(user, user.migrationIssuesWP);
+    api.verifyDownloadedAsset(user, user.migrationIssuesWP);
 });
 

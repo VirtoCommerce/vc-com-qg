@@ -26,6 +26,7 @@ exports.config = {
         becomePartnerPage: './pages/becomePartner.js',
         contributeAgreementPage: './pages/contributeAgreement.js',
         whitePapersMainPage: './pages/whitePaperMain.js',
+        caseStudiesPage: './pages/caseStudies.js',
         api: './tools/api.js'
     },
     bootstrap: null,

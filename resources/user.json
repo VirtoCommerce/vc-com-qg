@@ -63,5 +63,17 @@
     "b2bChallengesWP" : "B2B Challenges white paper",
     "cloudBenefitsWP" : "Cloud white paper",
     "enterpriseChallengesWP" : "Enterprise Challenges white paper",
-    "migrationIssuesWP": "Migration white paper"
+    "migrationIssuesWP": "Migration white paper",
+
+    "boschCaseStudy" : "Bosch case study",
+    "lavazzaCaseStudy" : "Lavazza case study",
+    "spainCaseStudy": "Estate spain case study",
+    "proffsCaseStudy" : "Proffsmagasinet case study",
+    "boekhandelCaseStudy" : "Boekhandel case study",
+    "eminentCaseStudy" : "Eminent IT case study",
+    "kupinataoCaseStudy": "Kupinatao case study",
+    "giftCaseStudy" : "Gift certificates case study",
+    "cifericaCaseStudy" : "Ciferica case study"
+
+
 }
