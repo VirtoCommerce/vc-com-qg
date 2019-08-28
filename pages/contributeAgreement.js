@@ -15,24 +15,15 @@ module.exports = {
 
     enterFullInformation: (user) => {
         I.fillField(firstName, user.firstName);
-        I.wait(2);
         I.fillField(lastName, user.lastName);
-        I.wait(2);
         I.fillField(email, user.email);
-        I.wait(2);
         I.fillField(githubHandle, user.githubHandle);
-        I.wait(2);
         I.fillField(streetAddress, user.streetAddress);
-        I.wait(2);
         I.fillField(postalcode, user.postalCode);
-        I.wait(2);
         I.fillField(phone, user.phone);
-        I.wait(2);
         I.fillField(companyName, user.company);
-        I.wait(2);
         I.fillField(agreeField, user.agree);
-        I.pressKey('Pagedown');
-        I.wait(2);
+        I.scrollPageToBottom();
         I.click(submit);
     }
 }
