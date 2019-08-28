@@ -21,21 +21,21 @@ module.exports = {
     },
 
     openEnterpriseChallenges() {
-        I.pressKey("Pagedown");
+        I.pressKey('Pagedown');
         I.click(enterpriseChallenges);
     },
 
     openMigrationIssues() {
-        I.pressKey("Pagedown");
+        I.scrollPageToBottom();
         I.click(migrationIssues);
     },
 
     downloadWhitePaper(user) {
-        I.pressKey('Pagedown');
+        I.scrollPageToBottom();
         I.fillField(email, user.email);
         I.fillField(name, user.fullName);
         //workaround for filling forms
-        I.wait(10);
+        I.wait(3);
         I.click(downloadButton);
     }
 };
