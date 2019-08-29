@@ -23,9 +23,10 @@ exports.config = {
     include: {
         I: './steps_file.js',
         basePage: './pages/basePage.js',
-        becomePartner: './pages/becomePartner.js',
-        contributeAgreement: './pages/contributeAgreement.js',
+        becomePartnerPage: './pages/becomePartner.js',
+        contributeAgreementPage: './pages/contributeAgreement.js',
         whitePapersMainPage: './pages/whitePaperMain.js',
+        caseStudiesPage: './pages/caseStudies.js',
         api: './tools/api.js'
     },
     bootstrap: null,

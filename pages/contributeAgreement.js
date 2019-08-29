@@ -1,4 +1,4 @@
-const I = actor();
+const I = require('../steps_file')();
 
 const firstName = "firstname";
 const lastName = "lastname";
@@ -8,7 +8,7 @@ const streetAddress = "address";
 const postalcode = "city";
 const phone = "phone";
 const companyName = "company";
-const agreeField =  "agree";
+const agreeField = "agree";
 const submit = "//button[@type = 'submit'][text() = 'Submit Agreement']";
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
         I.fillField(phone, user.phone);
         I.fillField(companyName, user.company);
         I.fillField(agreeField, user.agree);
-        I.pressKey('Pagedown');
+        I.scrollPageToBottom();
         I.click(submit);
     }
 }

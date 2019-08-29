@@ -1,23 +1,26 @@
-const I = actor();
+const I = require('../steps_file')();
 
-const fullName = "fullname";
-const email = "email";
-const phone = "phone";
-const company = "company";
-const website = "//label[text() = 'Website']/../input";
-const comments = "comments";
+const firstName = "Partner[FirstName]";
+const lastName = "Partner[LastName]";
+const email = "Partner[Email]";
+const phone = "Partner[Phone]";
+const company = "Partner[CompanyName]";
+const website = "Partner[Website]";
+const comments = "Partner[Message]";
 const requestPartnership = "//button[@type = 'submit'][text() = 'Inquire about Partnership']";
 
 module.exports = {
 
     enterFullInformation: (user) => {
-        I.fillField(fullName, user.fullName);
+        I.fillField(firstName, user.firstName);
+        I.fillField(lastName, user.lastName);
         I.fillField(email, user.email);
         I.fillField(phone, user.phone);
         I.fillField(company, user.company);
         I.fillField(website, user.website);
         I.fillField(comments, user.comments);
         I.pressKey('Pagedown');
+        I.wait(3);
         I.click(requestPartnership);
     }
 };
