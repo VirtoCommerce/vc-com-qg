@@ -1,20 +1,24 @@
 const I = actor();
+const codecept = require('../codecept.conf.js');
 
-const fullName = "fullname";
-const email = "email";
-const phone = "phone";
-const company = "company";
-const jobTitle = "jobtitle";
-const website = "website";
-const region = "region";
-const describe = "Please select from the following";
-const comments = "comments";
+const firstName = "Contact[FirstName]";
+const lastName = "Contact[LastName]";
+const email = "Contact[Email]";
+const phone = "Contact[Phone]";
+const company = "Contact[Company]";
+const jobTitle = "Contact[JobTitle]";
+const website = "Contact[Website]";
+const region = "Contact[GlobalRegion]";
+const describe = "Contact[Message]";
+const comments = "Contact[Comments]";
 const requestDemo = "//button[@type='submit'][text()='Request Demo']";
 
 module.exports = {
-
+    
     enterUserFull: (user) => {
-        I.fillField(fullName, user.fullName);
+        console.log(user);
+        I.fillField(firstName, user.firstName);
+        I.fillField(lastName, user.lastName);
         I.fillField(email, user.email);
         I.fillField(phone, user.phone);
         I.fillField(company, user.company);
@@ -23,7 +27,8 @@ module.exports = {
         I.selectOption(region, user.region);
         I.selectOption(describe, user.describe);
         I.fillField(comments, user.comments);
-        I.pressKey('Pagedown');
+        I.scrollPageToBottom();
         I.click(requestDemo);
+        I.waitUrlEquals(codecept.config.helpers.WebDriver.url + "thank-you");
     }
 };

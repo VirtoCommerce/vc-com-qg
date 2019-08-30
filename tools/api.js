@@ -4,6 +4,7 @@ const assert = require('assert');
 const contactPattern = "v1/contact/%s";
 
 let headers = {
+    "autopilotapikey": "",
     "Content-Type": "application/json",
     "Host": "api2.autopilothq.com"
 };
@@ -39,15 +40,16 @@ async function sendDeleteRequest(apiPath) {
 };
 
 function verifyRecord(expected, actual) {
-    assert.deepStrictEqual(actual.FirstName, expected.fullName);
+    assert.deepStrictEqual(actual.FirstName, expected.firstName);
+    assert.deepStrictEqual(actual.LastName, expected.lastName);
     assert.deepStrictEqual(actual.Email, expected.email);
     assert.deepStrictEqual(actual.Phone, expected.phone);
     assert.deepStrictEqual(actual.Company, expected.company);
     assert.deepStrictEqual(actual.Title, expected.jobTitle);
     assert.deepStrictEqual(actual.Website, expected.website);
-    assert.deepStrictEqual(actual.custom_fields[0].value, expected.comments);
-    assert.deepStrictEqual(actual.custom_fields[1].value, expected.region + " ");
-    assert.deepStrictEqual(actual.custom_fields[2].value, expected.describe);
+    assert.deepStrictEqual(actual.custom_fields[0].value, expected.region);
+    assert.deepStrictEqual(actual.custom_fields[1].value.trim(), expected.describe);
+    assert.deepStrictEqual(actual.custom_fields[2].value, expected.comments);
 };
 
 function verifyDownloadAssetRecord(expected, actual, assert_type) {
@@ -82,6 +84,10 @@ function verifyContributeAgreementRecord(expected, actual) {
 
 
 module.exports = {
+    setApiKey: async (apiKey) => {
+        headers.autopilotapikey = apiKey;
+    },
+    
     deleteUser: async (email) => {
         sendDeleteRequest(contactPattern.replace("%s", email));
     },
