@@ -27,6 +27,7 @@ exports.config = {
         contributeAgreementPage: './pages/contributeAgreement.js',
         whitePapersMainPage: './pages/whitePaperMain.js',
         caseStudiesPage: './pages/caseStudies.js',
+        findPartnerPage: './pages/findPartner.js',
         api: './tools/api.js'
     },
     bootstrap: null,
