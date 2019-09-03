@@ -82,6 +82,17 @@ function verifyContributeAgreementRecord(expected, actual) {
     assert.deepStrictEqual(actual.custom_fields[1].value, expected.streetAddress);
 }
 
+function verifyFindPartnerRecord(expected, actual) {
+    assert.deepStrictEqual(actual.FirstName, expected.firstName);
+    assert.deepStrictEqual(actual.LastName, expected.lastName);
+    assert.deepStrictEqual(actual.Email, expected.email);
+    assert.deepStrictEqual(actual.Phone, expected.phone);
+    assert.deepStrictEqual(actual.Company, expected.company);
+    assert.deepStrictEqual(actual.Website, expected.website);
+    //custom fields
+    assert.deepStrictEqual(actual.custom_fields[0].value.trim(), expected.region);
+    assert.deepStrictEqual(actual.custom_fields[1].value, expected.comments);
+}
 
 module.exports = {
     setApiKey: async (apiKey) => {
@@ -99,25 +110,27 @@ module.exports = {
 
     verifyDownloadedAsset: async (user, asset_type) => {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
-        console.log(pilotUser.data);
         verifyDownloadAssetRecord(user, pilotUser.data, asset_type);
     },
 
     verifyBecomePartner: async (user) => {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
-        console.log(pilotUser.data);
         verifyBecomePartnerRecord(user, pilotUser.data);
     },
 
     verifyContributeAgreement: async (user) => {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
-        console.log(pilotUser.data);
         verifyContributeAgreementRecord(user, pilotUser.data);
     },
 
     verifyEmailRecord: async (user) => {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
-        console.log(pilotUser.data);
         assert.deepStrictEqual(user.email, pilotUser.data.Email);
+    },
+
+    verifyFindPartner: async (user) => {
+        let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
+        verifyFindPartnerRecord(user, pilotUser.data);
+
     }
 };
