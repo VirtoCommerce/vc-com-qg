@@ -123,8 +123,14 @@ module.exports = {
         verifyContributeAgreementRecord(user, pilotUser.data);
     },
 
+    verifyEmailRecord: async (user) => {
+        let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
+        assert.deepStrictEqual(user.email, pilotUser.data.Email);
+    },
+
     verifyFindPartner: async (user) => {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
         verifyFindPartnerRecord(user, pilotUser.data);
+
     }
 };
