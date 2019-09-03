@@ -13,7 +13,15 @@ const describe = "Contact[Message]";
 const comments = "Contact[Comments]";
 const requestDemo = "//button[@type='submit'][text()='Request Demo']";
 
+const subscribeEmail = "//*[@name='Index[Email]']";
+const subscribeBtn = subscribeEmail + "/../button";
+
+const blogEmail = "Blog[Email]";
+const blogSubscribe = "//div[@class='blog-sidebar ']//button[text()='Subscribe']";
+const subscribedPopup = "//div[@class='modal-header ng-scope']";
+
 module.exports = {
+    subscribedPopup: subscribedPopup,
     
     enterUserFull: (user) => {
         console.log(user);
@@ -30,5 +38,18 @@ module.exports = {
         I.scrollPageToBottom();
         I.click(requestDemo);
         I.waitUrlEquals(codecept.config.helpers.WebDriver.url + "thank-you");
+    },
+
+    enterUserEmailFooter: (user) => {
+        I.scrollPageToBottom();
+        I.fillField(subscribeEmail, user.email);
+        I.wait(2);
+        I.click(subscribeBtn);
+    },
+
+    enterUserEmailSidePane: (user) => {
+        I.fillField(blogEmail, user.email);
+        I.wait(2);
+        I.click(blogSubscribe);
     }
 };

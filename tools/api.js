@@ -113,5 +113,11 @@ module.exports = {
         let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
         console.log(pilotUser.data);
         verifyContributeAgreementRecord(user, pilotUser.data);
+    },
+
+    verifyEmailRecord: async (user) => {
+        let pilotUser = await sendGetRequest(contactPattern.replace("%s", user.email));
+        console.log(pilotUser.data);
+        assert.deepStrictEqual(user.email, pilotUser.data.Email);
     }
 };
