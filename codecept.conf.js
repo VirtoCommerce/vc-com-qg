@@ -32,5 +32,13 @@ exports.config = {
     },
     bootstrap: null,
     mocha: {},
-    name: 'abm-quality-gate'
+    name: 'abm-quality-gate',
+    plugins: {
+        screenshotOnFail: {
+          enabled: true
+        },
+        allure: {
+          enabled: true
+        }
+      }
 }
