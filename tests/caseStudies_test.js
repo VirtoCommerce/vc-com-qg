@@ -3,9 +3,9 @@ let user = JSON.parse(fs.readFileSync("./resources/user.json", 'utf-8'));
 
 Feature('Case studies page');
 
-Before((I) => {
+Before((I, cookiesFooter) => {
     I.amOnPage("/case-studies");
-    I.pressKey("PageDown");
+    cookiesFooter.acceptCookies();
 });
 
 After((api) => {
@@ -78,7 +78,7 @@ Scenario('Giftcertificates page', (I, caseStudiesPage, api) => {
 
 Scenario('Ciferica page', (I, caseStudiesPage, api) => {
     caseStudiesPage.clickCifericaLink();
-    I.waitUrlEquals("https://virtocommerce.com/case-studies/ciferica");
+    I.waitUrlEquals("case-studies/ciferica");
     caseStudiesPage.downloadCaseStudies(user);
     I.waitUrlEquals("https://vcpro.blob.core.windows.net/blogs/niteco-cifereca-case-study.pdf");
     api.verifyDownloadedAsset(user, user.cifericaCaseStudy);

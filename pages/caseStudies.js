@@ -42,16 +42,13 @@ module.exports = {
     },
 
     clickKupinataoLink(){
-        I.scrollPageToBottom();
         I.click(kupinataoLink);
     },
 
     clickGiftLink(){
-        I.scrollPageToBottom();
         I.click(giftLink);
     },
     clickCifericaLink(){
-        I.scrollPageToBottom();
         I.click(cifericaLink);
     },
 

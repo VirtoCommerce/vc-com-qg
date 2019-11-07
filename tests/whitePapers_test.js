@@ -3,9 +3,9 @@ let user = JSON.parse(fs.readFileSync("./resources/user.json", 'utf-8'));
 
 Feature('White papers page ');
 
-Before((I) => {
+Before((I, cookiesFooter) => {
     I.amOnPage("/whitepapers");
-    I.pressKey('Pagedown');
+    cookiesFooter.acceptCookies();
 });
 
 After((api) => {

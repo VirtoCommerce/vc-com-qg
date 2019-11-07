@@ -28,6 +28,7 @@ exports.config = {
         whitePapersMainPage: './pages/whitePaperMain.js',
         caseStudiesPage: './pages/caseStudies.js',
         findPartnerPage: './pages/findPartner.js',
+        cookiesFooter: './pages/cookiesFooter.js',
         api: './tools/api.js'
     },
     bootstrap: null,

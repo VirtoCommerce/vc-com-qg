@@ -34,8 +34,6 @@ Scenario('Find partner/Region EMEA', (I, findPartnerPage, api) => {
     findPartnerPage.enterFullInformation(test_user);
     I.waitUrlEquals("thank-you-find-partner");
     api.verifyFindPartner(test_user);
-
-
 });
 
 Scenario('Find partner/Region EMEA/ Changed information', (I, findPartnerPage, api) => {
