@@ -13,7 +13,7 @@ After(I => {
 Scenario('Subscribe footer', async (I, basePage) => {
     I.amOnPage("/");
     basePage.enterUserEmailFooter(user);
-    I.waitUrlEquals('thank-you-newsletters');
+    I.waitInUrl('thank-you-newsletters', 2);
     await api.verifyEmailRecord(user);
 
 });
@@ -22,7 +22,6 @@ Scenario('Subscribe blog', async (I, basePage) => {
     I.amOnPage("/blog");
     await basePage.enterUserEmailSidePane(user);
     assert.deepStrictEqual(await I.grabTextFrom(basePage.subscribedPopup), 'Thank you, stay tuned for something awesome!');
-    
     await api.verifyEmailRecord(user);
 
 });
