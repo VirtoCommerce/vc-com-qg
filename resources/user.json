@@ -1,0 +1,167 @@
+{
+  "users_contribute_agreement": [
+    {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "asd@asd.asd",
+      "githubHandle": "https://github.com/12345",
+      "streetAddress": "Nevsky prospekt 12345",
+      "postalCode": "12345678",
+      "phone": "+71234567890",
+      "company": "virtoway",
+      "agree": "I AGREE"
+    },
+    {
+      "firstName": "Updated First Name",
+      "lastName": "Updated Last Name",
+      "email": "asd@asd.asd",
+      "githubHandle": "https://github.com/54321",
+      "streetAddress": "Nevsky prospekt 54321",
+      "postalCode": "87654321",
+      "phone": "+70987654321",
+      "company": "virtoway12345",
+      "agree": "I AGREE"
+    }
+  ],
+  "users_become_partner": [
+    {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "asd@asd.asd",
+      "phone": "+71234567890",
+      "company": "virtoway",
+      "website": "www.web-site.com",
+      "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "firstName": "First name changed",
+      "lastName": "Last name changed",
+      "email": "asd@asd.asd",
+      "phone": "+7987654321",
+      "company": "virtoway54321",
+      "website": "www.web-site1234.com",
+      "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+  ],
+  "user_find_partner": [
+     {
+        "firstName" :  "America",
+        "lastName":  "TestUser",
+        "email": "americas@mail.com",
+        "phone": "+71234567890",
+        "company": "virtoway",
+        "website": "www.web-site.com",
+        "region": "Americas",
+        "comments": "Americas user test #1 "
+      },
+      {
+        "firstName" :  "Emea",
+        "lastName":  "TestUser",
+        "email": "emea@mail.com",
+        "phone": "+71234567890",
+        "company": "virtoway",
+        "website": "www.web-site.com",
+        "region": "EMEA",
+        "comments": "EMEA user test #2"
+      },
+      {
+        "firstName" :  "Apac",
+        "lastName":  "TestUser",
+        "email": "apac@mail.com",
+        "phone": "+71234567890",
+        "company": "virtoway",
+        "website": "www.web-site.com",
+        "region": "APAC",
+        "comments": "APAC user test #3"
+      },
+      {
+        "firstName": "ApacChanged",
+        "lastName": "TestUser Changed",
+        "email": "apac@mail.com",
+        "phone": "+70987654321",
+        "company": "virtoway changed",
+        "website": "www.web-site.com12345",
+        "region": "APAC",
+        "comments": "APAC user test #4. Changed data"
+      }
+    ],
+
+  "user_contact_us": [
+    {
+      "firstName": "alex",
+      "lastName": "test",
+      "email": "sdf@sdf.sdf",
+      "phone": "+71234567890",
+      "company": "virtoway",
+      "jobTitle": "employee",
+      "website": "www.web-site.com",
+      "region": "Americas",
+      "describe": "I am a business or technical user who needs/has an ecommerce platform",
+      "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    },
+    {
+      "firstName": "alex",
+      "lastName": "test",
+      "email": "sdf@sdf.sdf",
+      "phone": "+71234567890",
+      "company": "virtoway",
+      "jobTitle": "employee",
+      "website": "www.web-site.com",
+      "region": "EMEA",
+      "describe": "I am a developer interested in trying Virto Commerce",
+      "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    },
+    {
+      "firstName": "alex",
+      "lastName": "test",
+      "email": "sdf@sdf.sdf",
+      "phone": "+71234567890",
+      "company": "virtoway",
+      "jobTitle": "employee",
+      "website": "www.web-site.com",
+      "region": "APAC",
+      "describe": "I am creating a solution for a client",
+      "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    },
+    {
+      "firstName": "alex upd",
+      "lastName": "test upd",
+      "email": "sdf@sdf.sdf",
+      "phone": "+71234567890",
+      "company": "virtoway",
+      "jobTitle": "employee",
+      "website": "www.web-site.com",
+      "region": "Americas",
+      "describe": "I am a business or technical user who needs/has an ecommerce platform",
+      "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    }
+  ],
+  "fullName": "alex text",
+  "email": "rty@rty.rty",
+  "phone": "+71234567890",
+  "company": "virtoway",
+  "jobTitle": "employee",
+  "website": "www.web-site.com",
+  "region": "Americas",
+  "describe": "I am a business or technical user who needs/has an ecommerce platform",
+  "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+  "firstName": "Alex",
+  "lastName": "TestUser",
+  "postalCode": "5451414614",
+  "githubHandle": "https://github.com",
+  "agree": "I AGREE",
+  "streetAddress": "Nevsky prospekt",
+  "b2bChallengesWP": "B2B Challenges white paper",
+  "cloudBenefitsWP": "Cloud white paper",
+  "enterpriseChallengesWP": "Enterprise Challenges white paper",
+  "migrationIssuesWP": "Migration white paper",
+  "boschCaseStudy": "Bosch case study",
+  "lavazzaCaseStudy": "Lavazza case study",
+  "spainCaseStudy": "Estate spain case study",
+  "proffsCaseStudy": "Proffsmagasinet case study",
+  "boekhandelCaseStudy": "Boekhandel case study",
+  "eminentCaseStudy": "Eminent IT case study",
+  "kupinataoCaseStudy": "Kupinatao case study",
+  "giftCaseStudy": "Gift certificates case study",
+  "cifericaCaseStudy": "Ciferica case study"
+}
